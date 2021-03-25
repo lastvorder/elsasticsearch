@@ -1,0 +1,8 @@
+logging:
+  level:
+    root: warn
+#    org:
+#      springframework:
+#        web: debug
+#  file:
+#    path: E:/log/info.log
