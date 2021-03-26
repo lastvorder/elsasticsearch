@@ -1,6 +1,6 @@
-logging:
-  level:
-    root: warn
+#logging:
+#  level:
+#    root: warn
 #    org:
 #      springframework:
 #        web: debug
@@ -10,3 +10,9 @@ spring:
   jackson:
     generator:
       write_numbers_as_strings: true
+
+  # 关闭thymeleaf缓存
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+    suffix: .html
