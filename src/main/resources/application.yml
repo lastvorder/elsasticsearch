@@ -6,3 +6,7 @@ logging:
 #        web: debug
 #  file:
 #    path: E:/log/info.log
+spring:
+  jackson:
+    generator:
+      write_numbers_as_strings: true
