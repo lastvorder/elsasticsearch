@@ -3,6 +3,7 @@ package com.last;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.last.pojo.User;
+import com.last.service.ProductService;
 import com.last.util.ElasticSearchConst;
 import org.elasticsearch.action.admin.indices.delete.DeleteIndexRequest;
 import org.elasticsearch.action.bulk.BulkRequest;
@@ -43,6 +44,8 @@ import java.util.concurrent.TimeUnit;
 class ElasitcsearchApplicationTests {
 
     private static final ObjectMapper mapper = new ObjectMapper();
+    @Autowired
+    private ProductService service;
 
     @Autowired
     @Qualifier("restHighLevelClient")
@@ -183,5 +186,11 @@ class ElasitcsearchApplicationTests {
         for (SearchHit documentFields : searchResponse.getHits().getHits()) {
             System.out.println(documentFields.getSourceAsString());
         }
+    }
+
+    // 测试解析数据并添加到索引
+    void testParseProduct() throws IOException {
+        boolean is = service.parseProduct("java");
+        System.out.println(is);
     }
 }
