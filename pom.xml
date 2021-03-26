@@ -19,6 +19,13 @@
         <elasticsearch.version>7.6.1</elasticsearch.version>
     </properties>
     <dependencies>
+        <!-- 解析网页 jSoup  视频音乐tika -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.10.2</version>
+        </dependency>
+        <!--thymeleaf 模板引擎-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
