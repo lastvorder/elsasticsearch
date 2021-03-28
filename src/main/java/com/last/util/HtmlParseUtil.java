@@ -5,6 +5,7 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
+import org.springframework.stereotype.Component;
 
 import java.io.IOException;
 import java.net.URL;
@@ -15,6 +16,7 @@ import java.util.List;
  * @author chenzihao
  * @date 2021/03/26
  */
+@Component
 public class HtmlParseUtil {
     public static void main(String[] args) throws IOException {
         new HtmlParseUtil().parseJd("爱").forEach(System.out::println);

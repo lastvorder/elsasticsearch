@@ -189,6 +189,7 @@ class ElasitcsearchApplicationTests {
     }
 
     // 测试解析数据并添加到索引
+    @Test
     void testParseProduct() throws IOException {
         boolean is = service.parseProduct("java");
         System.out.println(is);
